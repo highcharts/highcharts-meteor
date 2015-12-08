@@ -23,7 +23,7 @@ By default only Highcharts library, without any extra modules, is loaded. In `cl
 }
 ```
 
-Since wrapper is based on NPM package from Highcharts, you can find structure of modules on the github related pages: [highcharts-release](https://github.com/highcharts/highcharts-release), [highstock-release](https://github.com/highcharts/highstock-release), [highmaps-release](https://github.com/highcharts/highmaps-release). 
+Since wrapper is based on NPM package from [Highcharts](https://www.npmjs.com/package/highcharts), you can find structure of modules on the [github page](https://github.com/highcharts/highcharts). **Note: NPM package is supported since 4.1.10**. 
 
 ## Usage
 
@@ -35,7 +35,7 @@ You can load source files, instead of minified for debugging. Simply change `.js
 
 ```json
 {
-	"version": "2.1.10",
+	"version": "4.1.10",
 	"base": "highstock.src.js",
 	"adapter": "jquery",
 	"modules": [

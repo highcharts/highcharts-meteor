@@ -1,28 +1,9 @@
-var major = [4, 2, 1],
-    minor = 1,
-    fix = 10,
-    highchartsVersion = [major[0], minor, fix].join('.'),
-    highstockVersion = [major[1], minor, fix].join('.'),
-    highmapsVersion = [major[2], minor, fix].join('.'),
-    releases = {
-      // Highcharts (minified) release version:
-      'highcharts.js': ['highcharts-release', highchartsVersion],
-      // Highstock (minified) release version: 
-      'highstock.js': ['highstock-release', highstockVersion],
-      // Highmaps (minified) release version:  
-      'highmaps.js': ['highmaps-release', highmapsVersion],
-      // Highcharts (source) release version: 
-      'highcharts.src.js': ['highcharts-release', highchartsVersion],
-      // Highstock (source) release version:  
-      'highstock.src.js': ['highstock-release', highstockVersion],
-      // Highmaps (source) release version: 
-      'highmaps.src.js': ['highmaps-release', highmapsVersion] 
-    },
+var minVersion = '4.1.10',
     fs = Npm.require('fs'),
     path = Npm.require('path'),
     mkdirp = Npm.require('mkdirp'),
     version = '0.0.1',
-    npmPath = ['.npm', 'package', 'node_modules'],
+    npmPath = ['.npm', 'package', 'node_modules', 'highcharts', 'lib'],
     configFile = path.resolve('client/config.highcharts.json'),
     clientDir = path.resolve('client'),
     where = 'client',
@@ -45,19 +26,16 @@ try {
 var adapter = config && config.adapter ? config.adapter : 'jquery',
     base = config && config.base ? config.base : 'highcharts.js',
     modules = config && config.modules ? config.modules : [],
-    release = releases[base],
-    releaseVersion = config && config.version ? config.version : release[1],
+    releaseVersion = config && config.version ? config.version : minVersion,
     modulesLength = modules.length,
     dependency = {},
     files = [],
     i;
 
-// Hook to highcharts/highstock/highmaps-release NPM package:
-dependency[release[0]] = releaseVersion;
-Npm.depends(dependency);
-
-// Update path:
-npmPath.push(release[0]);
+// Hook to highcharts NPM package:
+Npm.depends({
+  highcharts: releaseVersion
+});
 
 // Add modules:
 for (i = 0; i < modulesLength; i++) {
