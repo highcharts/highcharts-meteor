@@ -46,7 +46,7 @@ Package.describe({
   name: 'highcharts:highcharts-meteor',
   version: version,
   summary: 'Official wrapper for Highcharts, Highstock and Highmaps charting libraries.',
-  git: '',
+  git: 'https://github.com/highcharts/highcharts-meteor.git',
   documentation: 'README.md'
 });
 
