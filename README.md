@@ -10,9 +10,9 @@ By default only Highcharts library, without any extra modules, is loaded. In `cl
 
 ```js
 {
-	"version": "4.1.10",	 	// Choose version of Highcharts/Highstock/Highmaps.
+	"version": "4.2.0",		 	// Choose version of Highcharts/Highstock/Highmaps.
 	"base": "highcharts.js",	// Choose base, can be "highcharts.js", "highstock.js" or "highmaps.js"
-	"adapter": "jquery",		// Choose adapter, e.g. "jquery" or "standalone-framework.js".
+	"adapter": "default",		// Choose adapter, e.g. "jquery" or "standalone-framework.js".
 	"modules": [				// Choose modules to be installed altogether with main library.
 		"highcharts-3d.src.js",
 		"modules/exporting.js",
@@ -24,6 +24,8 @@ By default only Highcharts library, without any extra modules, is loaded. In `cl
 ```
 
 Since wrapper is based on NPM package from [Highcharts](https://www.npmjs.com/package/highcharts), you can find structure of modules on the [github page](https://github.com/highcharts/highcharts). **Note: NPM package is supported since 4.1.10**. 
+
+Since Highcharts version **4.2.0**, Highcharts will come with built-in adapter. That means `adapter` is not necessary to be set anymore.
 
 ## Usage
 

@@ -1,8 +1,8 @@
-var minVersion = '4.1.10',
+var minVersion = '4.2.0',
     fs = Npm.require('fs'),
     path = Npm.require('path'),
     mkdirp = Npm.require('mkdirp'),
-    version = '0.0.1',
+    version = '0.1.0',
     npmPath = ['.npm', 'package', 'node_modules', 'highcharts', 'lib'],
     configFile = path.resolve('client/config.highcharts.json'),
     clientDir = path.resolve('client'),
@@ -23,7 +23,7 @@ try {
 }
 
 // Build up options:
-var adapter = config && config.adapter ? config.adapter : 'jquery',
+var adapter = config && config.adapter ? config.adapter : 'default',
     base = config && config.base ? config.base : 'highcharts.js',
     modules = config && config.modules ? config.modules : [],
     releaseVersion = config && config.version ? config.version : minVersion,
@@ -60,7 +60,7 @@ Package.onUse(function (api) {
   // jQuery dependency or Standalone Adapter:
   if (adapter === 'jquery') {
     api.use(adapter);
-  } else {
+  } else if (adapter !== 'default') {
     api.addFiles(npmPath.concat(['adapters', adapter]).join(path.sep), where);
   }
 
