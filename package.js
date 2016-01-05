@@ -1,11 +1,12 @@
-var minVersion = '4.2.0',
+var minVersion = '4.2.1',
     fs = Npm.require('fs'),
     path = Npm.require('path'),
     mkdirp = Npm.require('mkdirp'),
-    version = '0.1.1',
-    npmPath = ['.npm', 'package', 'node_modules', 'highcharts', 'lib'],
-    configFile = path.resolve('./client/config.highcharts.json'),
-    clientDir = path.resolve('./client'),
+    version = '0.1.2',
+    npmPath = ['.npm', 'package', 'node_modules', 'highcharts'],
+    baseDir = process.cwd(),
+    configFile = path.resolve(baseDir + '/../client/config.highcharts.json'),
+    clientDir = path.resolve(baseDir + '/../client'),
     where = 'client',
     config = false;
 
