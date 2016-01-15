@@ -10,7 +10,7 @@ By default only Highcharts library, without any extra modules, is loaded. In `cl
 
 ```js
 {
-	"version": "4.2.0",		 	// Choose version of Highcharts/Highstock/Highmaps.
+	"version": "4.2.1",		 	// Choose version of Highcharts/Highstock/Highmaps.
 	"base": "highcharts.js",	// Choose base, can be "highcharts.js", "highstock.js" or "highmaps.js"
 	"adapter": "default",		// Choose adapter, e.g. "jquery" or "standalone-framework.js".
 	"modules": [				// Choose modules to be installed altogether with main library.
@@ -37,11 +37,48 @@ You can load source files, instead of minified for debugging. Simply change `.js
 
 ```json
 {
-	"version": "4.1.10",
+	"version": "4.2.1",
 	"base": "highstock.src.js",
 	"adapter": "jquery",
 	"modules": [
 		"highcharts-3d.src.js"
+	]
+}
+```
+
+## JSON samples
+
+
+* Highcharts version < 4.2.1
+
+```js
+{
+	"version": "4.2.0",
+	"base": "js/highcharts.js",
+	"adapter": "default",
+	"modules": [
+		"js/highcharts-3d.src.js",
+		"js/modules/exporting.js",
+		"js/modules/heatmap.js",
+		"js/modules/drilldown.js",
+		"js/themes/gray.js"
+	]
+}
+```
+
+* Highcharts version >= 4.2.1
+
+```js
+{
+	"version": "4.2.1",
+	"base": "highcharts.js",
+	"adapter": "default",
+	"modules": [
+		"highcharts-3d.src.js",
+		"modules/exporting.js",
+		"modules/heatmap.js",
+		"modules/drilldown.js",
+		"themes/gray.js"
 	]
 }
 ```
