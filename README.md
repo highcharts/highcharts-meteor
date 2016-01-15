@@ -23,7 +23,7 @@ By default only Highcharts library, without any extra modules, is loaded. In `cl
 }
 ```
 
-Since wrapper is based on NPM package from [Highcharts](https://www.npmjs.com/package/highcharts), you can find structure of modules on the [github page](https://github.com/highcharts/highcharts). **Note: NPM package is supported since 4.1.10**. 
+Since wrapper is based on NPM package from [Highcharts](https://www.npmjs.com/package/highcharts), you can find structure of modules on the [github page](https://github.com/highcharts/highcharts-dist). **Note: NPM package is supported since 4.1.10**. 
 
 Since Highcharts version **4.2.0**, Highcharts will come with built-in adapter. That means `adapter` is not necessary to be set anymore.
 
