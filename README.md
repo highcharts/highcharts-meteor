@@ -8,7 +8,7 @@ To use Highcharts in Meteor 1.3+, install package from npm:
 Now, include Highcharts in your project: 
  
 ```js
-var Highcharts = require(‘highcharts');
+var Highcharts = require('highcharts');
 ````
 
 More details you can find in the official [documentation](http://www.highcharts.com/docs/getting-started/install-from-npm).
