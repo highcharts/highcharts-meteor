@@ -44,8 +44,6 @@ Since Highcharts version **4.2.0**, Highcharts will come with built-in adapter. 
 
 That's all, you have access on the `client` side to Highcharts namespace. You can create charts in a standard way, as always. You can find examples in [this article](http://www.highcharts.com/blog/195-meteor-standalone).
 
-You can also find examples in our [article](http://www.highcharts.com/blog/195-meteor-standalone).
-
 ## Debugging
 
 You can load source files, instead of minified for debugging. Simply change `.js` to `.src.js` in the config file, for example:
