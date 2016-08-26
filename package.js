@@ -1,4 +1,4 @@
-var version = '0.2.2';
+var version = '0.2.3';
 
 Package.describe({
   name: 'highcharts:highcharts-meteor',
