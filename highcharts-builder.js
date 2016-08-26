@@ -45,13 +45,8 @@ if (!fs.existsSync(packageJs)) {
 // getContent inside a function
 function getFunctionBody (func) {
   var lines = func.toString().split('\n'),
-      body = lines.slice(1, lines.length - 1), // remove declaration and closing bracket
-      bodyLen = body.length,
-      i = 0;
+      body = lines.slice(1, lines.length - 1); // remove declaration and closing bracket
   
-  for (; i < bodyLen; i++) {
-    body[i] = body[i].slice(0, body[i].lastIndexOf("//")).trim(); // remove line numbers by Meteor generated
-  }
   return body.join('\n');
 }
 
